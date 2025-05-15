@@ -54,26 +54,23 @@ do
  echo "i is equal to $i"
 done
 
-num=1
-while [[ $num -lt 10 ]]
+# This is magic algorithm with bash :)
+randomNumber=$((1 +$RANDOM % 20 )) # generate a random number beetween 1 and 20 [1, 20]
+read -p "Enter a number of your choice: " num
+while [[ 1 ]]
 do
- if [[ $num -eq 5 ]]
- then
- break
+ if [[ $num -lt $randomNumber ]]; then
+    echo "not right try a number more greater"
  fi
- ((num++))
+ if [[ $num -gt $randomNumber ]]; then
+    echo "not right try a number more less"
+ fi
+ read -p "Enter a number of your choice again: " num
+ if [[ $num -eq $randomNumber ]]; then
+    echo "You win 🚀 the magic number was $randomNumber"
+    break
+ fi
 done
-echo "Loop completed"
 
-for (( a = 1; a < 10; a++ ))
-do
- echo "outer loop: $a"
- for (( b = 1; b < 100; b++ ))
- do
- if [[ $b -gt 5 ]]
- then
- break 2
- fi
- echo "Inner loop: $b "
- done
-done
+
+
