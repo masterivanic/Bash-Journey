@@ -28,3 +28,4 @@ text="Hello, World!"
 echo ${text:0:5} # Output: Hello
 echo ${text:7:5} # Output: World
 echo "${text:7:10}" # Output: World!
+
