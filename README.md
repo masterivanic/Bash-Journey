@@ -204,3 +204,38 @@ These expressions check the result of the previously executed command using `$?`
 
 ---
 
+In order to debug your bash scripts, you can use -x when executing
+your scripts:
+   ```bash
+   bash -x ./your_script.sh
+   ```
+---
+
+# Terminal Shortcuts Cheat Sheet
+
+### Delete Commands
+- **Delete everything from the cursor to the end of the line:**  
+  `Ctrl + K`
+- **Delete everything from the cursor to the start of the line:**  
+  `Ctrl + U`
+- **Delete one word backward from cursor:**  
+  `Ctrl + W`
+
+### History and Search
+- **Search your history backward:**  
+  `Ctrl + R`  
+  _This is probably the one that I use the most. It is really handy and speeds up my workflow a lot._
+
+### Screen Management
+- **Clear the screen (alternative to typing `clear`):**  
+  `Ctrl + L`
+- **Stop output to the screen:**  
+  `Ctrl + S`
+- **Enable output to the screen (if previously stopped with Ctrl + S):**  
+  `Ctrl + Q`
+
+### Process Control
+- **Terminate the current command:**  
+  `Ctrl + C`
+- **Throw the current command to background:**  
+  `Ctrl + Z`

@@ -56,8 +56,9 @@ done
 
 # This is magic algorithm with bash :)
 randomNumber=$((1 +$RANDOM % 20 )) # generate a random number beetween 1 and 20 [1, 20]
-read -p "Enter a number of your choice: " num
-while [[ 1 ]]
+read -r -p "Enter a number of your choice: " num
+set -x
+while [[ true ]]
 do
  if [[ $num -lt $randomNumber ]]; then
     echo "not right try a number more greater"
@@ -65,7 +66,7 @@ do
  if [[ $num -gt $randomNumber ]]; then
     echo "not right try a number more less"
  fi
- read -p "Enter a number of your choice again: " num
+ read -r -p "Enter a number of your choice again: " num
  if [[ $num -eq $randomNumber ]]; then
     echo "You win 🚀 the magic number was $randomNumber"
     break
