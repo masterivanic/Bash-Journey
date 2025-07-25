@@ -19,6 +19,7 @@ clear='\e[0m'
 ColorGreen(){
  echo -ne $green$1$clear
 }
+
 ColorBlue(){
  echo -ne $blue$1$clear
 }
@@ -67,5 +68,33 @@ function all_checks(){
     tcp_check
 }
 
-all_checks
-# Then run to exexute remotly ssh user@server_ip 'bash -s' < ./status.sh
+function run_command_on_server(){
+    # Then run to exexute remotly ssh user@server_ip 'bash -s' < ./status.sh
+    # in first argument user and second server ip adress
+    ssh $1@$1 'bash -s' < ./status.sh
+}
+
+menu(){
+    echo -ne " Application menu
+    $(ColorGreen '1)') Memory usage
+    $(ColorGreen '2)') CPU load
+    $(ColorGreen '3)') Number of TCP connections
+    $(ColorGreen '4)') Kernel version
+    $(ColorGreen '5)') Check All
+    $(ColorGreen '0)') Exit
+    $(ColorBlue 'Choose an option:') "
+    read a
+    case $a in 
+        1) memory_check ; menu ;;
+        2) cpu_usage ; menu ;;
+        3) tcp_check ; menu ;;
+        4) check_kernel_version ; menu ;;
+        5) all_checks ; menu ;;
+        0) exit 0 ;;
+        *) echo -e $red"Wrong option."$clear;
+
+    WrongCommand;;
+        esac
+    }
+
+menu
