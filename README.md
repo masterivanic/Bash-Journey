@@ -239,3 +239,13 @@ your scripts:
   `Ctrl + C`
 - **Throw the current command to background:**  
   `Ctrl + Z`
+
+
+###  Operator Description
+- `>` : Save output to a file
+-  `>>` :  Append output to a file
+-  `<`: Read input from a file
+-  `2>` : Redirect error messages
+-  `|` : Send the output from one program as input to another program
+-  `<<` : Pipe multiple lines into a program cleanly
+-  `<<<` : Pipe a single line into a program cleanly
