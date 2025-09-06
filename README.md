@@ -249,3 +249,15 @@ your scripts:
 -  `|` : Send the output from one program as input to another program
 -  `<<` : Pipe multiple lines into a program cleanly
 -  `<<<` : Pipe a single line into a program cleanly
+
+## User add command:
+   useradd options (see: man useradd):
+   
+- -r, --system Create a system account. see: Implications creating system accounts
+- -m, --create-home Create the user's home directory.
+- -d, --home-dir HOME_DIR Home directory of the new account.
+- -s, --shell SHELL Login shell of the new account.
+- -g, --gid GROUP Name or ID of the primary group.
+- -G, --groups GROUPS List of supplementary groups.
+- -u, --uid UID Specify user ID. see: Understanding how uid and gid work in Docker containers [see plus](https://medium.com/@mccode/understanding-how-uid-and-gid-work-in-docker-containers-c37a01d01cf)
+- -p, --password PASSWORD Encrypted password of the new account (e.g. ubuntu).
