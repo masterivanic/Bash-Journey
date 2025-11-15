@@ -14,6 +14,8 @@ find . -type d -mmin -30
 # Show modification time along with the results
 find . -type f -mmin -15 -exec ls -lh {} \;
 
-
 # creates directories for two sites, each with its own subfolders: backup, monitoring, and network.
 mkdir -p ~/myfolder/{site-01,site-02}/{backup,monitoring,network}
+
+# wath -n time command (repeat a command every few seconds)
+watch -n 2 df -h
