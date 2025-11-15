@@ -19,3 +19,12 @@ mkdir -p ~/myfolder/{site-01,site-02}/{backup,monitoring,network}
 
 # wath -n time command (repeat a command every few seconds)
 watch -n 2 df -h
+
+# Enable timestamps in your bash history - it's useful when you need to remember what you were working on and when.
+export HISTTIMEFORMAT="%F %T "
+
+# view your history, you'll see the date and time for each command
+history | tail -n 5 
+
+history 5
+
