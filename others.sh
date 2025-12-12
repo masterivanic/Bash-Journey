@@ -34,3 +34,5 @@ history | tail -n 5
 
 history 5
 
+# Top 10 most frequently modified files
+git log --pretty=format: --name-only | sort | uniq -c | sort -nr | head -10
