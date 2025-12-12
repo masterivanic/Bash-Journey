@@ -2,6 +2,9 @@
 # Files modified in the last 10 minutes
 find . -type f -mmin -10
 
+# To remove all unnecessary information from output (warnings, errors, etc.):
+find / -name "*.conf" 2>/dev/null
+
 # Which log files have been changed or written to in the last hour"
 find /var/log -type f -mmin -60
 
@@ -16,6 +19,9 @@ find . -type f -mmin -15 -exec ls -lh {} \;
 
 # creates directories for two sites, each with its own subfolders: backup, monitoring, and network.
 mkdir -p ~/myfolder/{site-01,site-02}/{backup,monitoring,network}
+
+# To completely clear a file
+cat /dev/null > bigfile
 
 # wath -n time command (repeat a command every few seconds)
 watch -n 2 df -h
