@@ -15,6 +15,15 @@ green='\e[32m'
 blue='\e[34m'
 clear='\e[0m'
 
+Colorized(){
+    sudo dnf install grc
+    GRC_ALIASES=true
+    [[ -s "/etc/profile.d/grc.sh" ]] && source /etc/profile.d/grc.sh
+    source ~/.bashrc
+    [[ -s "/etc/grc.zsh" ]] && source /etc/grc.zsh
+    source ~/.zshrc
+}
+
 
 ColorGreen(){
  echo -ne $green$1$clear
