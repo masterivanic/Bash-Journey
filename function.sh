@@ -18,6 +18,7 @@ function hello() {
     echo "Hello world $1"
 }
 
+#https://blog.stephane-robert.info/docs/admin-serveurs/linux/namespaces/
 function debugContainer() {
     read -p "Enter your containerName ? " containerName
     echo "container name is: $containerName"
