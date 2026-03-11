@@ -36,3 +36,21 @@ history 5
 
 # Top 10 most frequently modified files
 git log --pretty=format: --name-only | sort | uniq -c | sort -nr | head -10
+
+
+"""
+# Source - https://stackoverflow.com/a/4079109
+# Posted by dogbane
+# Retrieved 2026-03-11, License - CC BY-SA 2.5
+
+-F, --fixed-strings
+              Interpret PATTERN as a list of fixed strings, separated by newlines, any of which is to be matched.    
+-x, --line-regexp
+              Select only those matches that exactly match the whole line.
+-v, --invert-match
+              Invert the sense of matching, to select non-matching lines.
+-f FILE, --file=FILE
+              Obtain patterns from FILE, one per line.  The empty file contains zero patterns, and therefore matches nothing.
+
+"""
+grep -Fxvf file1 file2 # get diff beetween 2 files 
