@@ -39,10 +39,6 @@ git log --pretty=format: --name-only | sort | uniq -c | sort -nr | head -10
 
 
 """
-# Source - https://stackoverflow.com/a/4079109
-# Posted by dogbane
-# Retrieved 2026-03-11, License - CC BY-SA 2.5
-
 -F, --fixed-strings
               Interpret PATTERN as a list of fixed strings, separated by newlines, any of which is to be matched.    
 -x, --line-regexp
@@ -54,3 +50,16 @@ git log --pretty=format: --name-only | sort | uniq -c | sort -nr | head -10
 
 """
 grep -Fxvf file1 file2 # get diff beetween 2 files 
+
+grep ^word filepath # eg grep ^dave /opt/directory/file (with find all word started with dave in my file)
+
+grep 'word$' filepath # eg grep dave$ /opt/directory/file (with find all word ended with dave in my file)
+
+grep -A1 'word|pattern' filepath # eg grep -A1 dave /opt/directory/file (with find all word with dave and print word after)
+
+grep -B1 'word|pattern' filepath # eg grep -B1 dave /opt/directory/file (with find all word with dave and print word before)
+
+grep -C1 'word|pattern' filepath # eg grep -C1 dave /opt/directory/file (with find all word with dave and print context before and after)
+
+
+
