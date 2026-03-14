@@ -63,9 +63,13 @@ grep -C1 'word|pattern' filepath # eg grep -C1 dave /opt/directory/file (with fi
 
 grep -i 'word' filepath # eg grep -i dave /opt/directory/file (find all word with dave key insensitive)
 
- grep -o 'word' filepath # eg grep -o '^d.' /opt/directory/file (find only word with matches pattern)
+grep -o 'word' filepath # eg grep -o '^d.' /opt/directory/file (find only word with matches pattern)
 
-  compgen -b # print all bash builtin command
+compgen -b # print all bash builtin command
+
+bash -n file # check syntax error in a bash script
+
+echo $? # return result code of previous command bash entered. 0 if not error
 
 
 
