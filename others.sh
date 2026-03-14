@@ -61,5 +61,11 @@ grep -B1 'word|pattern' filepath # eg grep -B1 dave /opt/directory/file (with fi
 
 grep -C1 'word|pattern' filepath # eg grep -C1 dave /opt/directory/file (with find all word with dave and print context before and after)
 
+grep -i 'word' filepath # eg grep -i dave /opt/directory/file (find all word with dave key insensitive)
+
+ grep -o 'word' filepath # eg grep -o '^d.' /opt/directory/file (find only word with matches pattern)
+
+  compgen -b # print all bash builtin command
+
 
 
