@@ -71,5 +71,7 @@ bash -n file # check syntax error in a bash script
 
 echo $? # return result code of previous command bash entered. 0 if not error
 
+cat file.txt | wc -l # count number of line in file.txt file
+
 
 
