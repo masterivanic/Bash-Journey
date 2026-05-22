@@ -73,5 +73,17 @@ echo $? # return result code of previous command bash entered. 0 if not error
 
 cat file.txt | wc -l # count number of line in file.txt file
 
+## SSH config from a server to forward a cluster service
+Host nwadmin
+    Hostname nwadmin.frec.bull.fr
+    User username
+
+Host xxx
+    User username
+    GSSAPIAuthentication no
+    ProxyJump proxyname
+    Hostname xx.xx.xx.xx
+    LocalForward localport hostname:443
+    IdentityFile ~\.ssh\key_id
 
 
